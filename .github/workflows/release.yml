@@ -13,7 +13,6 @@ jobs:
         GO_VERSION: [1.21]
         OS_WINDOWS: [windows]
         OS_LINUX: [linux]
-        ARTIFACT_NAME: [SwitchValidationTool]
         ARTIFACT_DIR: [SwitchValidationTool]
 
     runs-on: ubuntu-latest
@@ -39,16 +38,16 @@ jobs:
         run: |
           cd ./src
           go mod tidy
-          GOOS=${{ matrix.OS_WINDOWS }} GOARCH=amd64 go build -o ./${{ matrix.ARTIFACT_DIR }}/${{ matrix.OS_WINDOWS }}/
+          GOOS=${{ matrix.OS_WINDOWS }} GOARCH=amd64 go build -o ./SwitchValidationTool_${{ matrix.VERSION_TAG }}/${{ env.VERSION_TAG }}/${{ matrix.OS_WINDOWS }}/
 
       - name: Build Linux Artifact
         run: |
           cd ./src
           go mod tidy
-          GOOS=${{ matrix.OS_LINUX }} GOARCH=amd64 go build -o ./${{ matrix.ARTIFACT_DIR }}/${{ matrix.OS_LINUX }}/
+          GOOS=${{ matrix.OS_LINUX }} GOARCH=amd64 go build -o ./SwitchValidationTool_${{ matrix.VERSION_TAG }}/${{ env.VERSION_TAG }}/${{ matrix.OS_LINUX }}/
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ matrix.ARTIFACT_DIR }}
-          path: ./src/${{ matrix.ARTIFACT_DIR }}/
+          name: SwitchValidationTool_${{ matrix.VERSION_TAG }}
+          path: ./src/SwitchValidationTool_${{ matrix.VERSION_TAG }}/
