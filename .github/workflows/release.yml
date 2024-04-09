@@ -29,7 +29,7 @@ jobs:
           YEAR=$(date +'%Y')
           MONTH=$(date +'%m')
           DAY=$(date +'%d')
-          VERSION_TAG="${YEAR}.${MONTH}.${DAY}-${{ github.run_number }}"
+          VERSION_TAG="${YEAR}.${MONTH}.${DAY}_${{ github.run_number }}"
           echo "VERSION_TAG=${VERSION_TAG}" >> $GITHUB_ENV
 
       - name: Install PCAP Compiler
@@ -45,13 +45,13 @@ jobs:
         run: |
           cd ./src
           go mod tidy
-          GOOS=${{ matrix.OS_WINDOWS }} GOARCH=amd64 go build -o ./SwitchValidationTool_${{ env.VERSION_TAG }}/${{ env.VERSION_TAG }}/${{ matrix.OS_WINDOWS }}/
+          GOOS=${{ matrix.OS_WINDOWS }} GOARCH=amd64 go build -o ./SwitchValidationTool_${{ env.VERSION_TAG }}/${{ matrix.OS_WINDOWS }}/
 
       - name: Build Linux Artifact
         run: |
           cd ./src
           go mod tidy
-          GOOS=${{ matrix.OS_LINUX }} GOARCH=amd64 go build -o ./SwitchValidationTool_${{ env.VERSION_TAG }}/${{ env.VERSION_TAG }}/${{ matrix.OS_LINUX }}/
+          GOOS=${{ matrix.OS_LINUX }} GOARCH=amd64 go build -o ./SwitchValidationTool_${{ env.VERSION_TAG }}/${{ matrix.OS_LINUX }}/
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
