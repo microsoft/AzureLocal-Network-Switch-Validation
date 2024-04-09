@@ -50,21 +50,15 @@ jobs:
           cd ./src
           go mod tidy
           GOOS=${{ matrix.OS_WINDOWS }} GOARCH=amd64 go build -o ./${{ matrix.Artifact_Name }}_${{ env.VERSION_TAG }}/${{ matrix.OS_WINDOWS }}/
+          cd ./${{ matrix.Artifact_Name }}_${{ env.VERSION_TAG }}/${{ matrix.OS_WINDOWS }}/
+          sha256sum * > checksum_sha256.txt
+          cat checksum_sha256.txt
 
       - name: Build Linux Artifact
         run: |
           cd ./src
           go mod tidy
           GOOS=${{ matrix.OS_LINUX }} GOARCH=amd64 go build -o ./${{ matrix.Artifact_Name }}_${{ env.VERSION_TAG }}/${{ matrix.OS_LINUX }}/
-
-      - name: Calculate SHA-256 checksum for Windows Tool
-        run: |
-          cd ./${{ matrix.Artifact_Name }}_${{ env.VERSION_TAG }}/${{ matrix.OS_WINDOWS }}/
-          sha256sum * > checksum_sha256.txt
-          cat checksum_sha256.txt
-
-      - name: Calculate SHA-256 checksum for Windows Tool
-        run: |
           cd ./${{ matrix.Artifact_Name }}_${{ env.VERSION_TAG }}/${{ matrix.OS_LINUX }}/
           sha256sum * > checksum_sha256.txt
           cat checksum_sha256.txt
