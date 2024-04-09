@@ -33,7 +33,9 @@ jobs:
           echo "VERSION_TAG=${VERSION_TAG}" >> $GITHUB_ENV
 
       - name: Install PCAP Compiler
-        run: sudo apt install libpcap-dev -y
+        run: |
+          sudo apt update
+          sudo apt install libpcap-dev -y
 
       - name: Unit Test
         run: |
