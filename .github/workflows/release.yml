@@ -13,7 +13,7 @@ jobs:
         GO_VERSION: [1.22.2]
         OS_WINDOWS: [windows]
         OS_LINUX: [linux]
-        Artifact_Name: "SwitchValidationTool"
+        Artifact_Name: [SwitchValidationTool]
 
     # runs-on: ubuntu-latest
     runs-on: ubuntu-20.04
