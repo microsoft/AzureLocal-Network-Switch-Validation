@@ -21,11 +21,12 @@ assignees: bkablawi, liunick-msft, SwitchValidationTeam
 
 - Link to device datasheet: 
 
-## After the tool execution successfully, there will be four files:
+## After the tool execution successfully, there will be five files:
 
-PDF File
-YAML File
-Log File
-PCAP file
+- PDF File
+- YAML File
+- Log File
+- PCAP file
+- Switch Configurations (Please Remove Sensitive Data!)
 
 Please zip and upload these here to submit for review!
