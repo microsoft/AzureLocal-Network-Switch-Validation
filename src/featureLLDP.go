@@ -40,7 +40,6 @@ func (l *LLDPResultType) decodeLLDPPacket(packet gopacket.Packet) {
 		l.ChasisID = ChassisIDHex
 		l.ChasisIDType = LLDPType.ChassisID.Subtype.String()
 		l.PortName = string(LLDPType.PortID.ID)
-		
 
 		for _, v := range LLDPType.Values {
 			// Subtype: Priority Flow Control Configuration 0x0b
