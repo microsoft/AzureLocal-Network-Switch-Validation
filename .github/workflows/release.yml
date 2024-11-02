@@ -10,7 +10,7 @@ jobs:
   build-project:
     strategy:
       matrix:
-        GO_VERSION: [1.22.2]
+        GO_VERSION: [1.23.2]
         OS_WINDOWS: [windows]
         OS_LINUX: [linux]
         Artifact_Name: [SwitchValidationTool]
