@@ -4,10 +4,6 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	_ "golang.org/x/crypto/sha3"
-	_ "golang.org/x/image/draw"
-	_ "golang.org/x/net/context"
-	_ "golang.org/x/text"
 	"io"
 	"log"
 	"os"
@@ -17,6 +13,9 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
+	 _ "golang.org/x/image/draw"
+
 )
 
 type RoleResultType struct {
