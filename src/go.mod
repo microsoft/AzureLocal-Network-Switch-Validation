@@ -14,6 +14,8 @@ require (
 	golang.org/x/sys v0.26.0 // indirect
 )
 
-replace golang.org/x/net => golang.org/x/net v0.30.0
-
-replace golang.org/x/crypto => golang.org/x/crypto v0.28.0
+replace (
+	golang.org/x/crypto => golang.org/x/crypto v0.28.0
+	golang.org/x/net => golang.org/x/net v0.30.0
+	golang.org/x/text => golang.org/x/text v0.19.0
+)
