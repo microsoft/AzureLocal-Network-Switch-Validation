@@ -1,15 +1,15 @@
-<!-- [![Build Status](https://msazure.visualstudio.com/One/_apis/build/status%2FOneBranch%2FAzureStackHCI-Network-Switch-Validation%2FAzureStackHCI-Network-Switch-Validation-Official?repoName=AzureStackHCI-Network-Switch-Validation&branchName=main)](https://msazure.visualstudio.com/One/_build/latest?definitionId=314745&repoName=AzureStackHCI-Network-Switch-Validation&branchName=main) -->
+<!-- [![Build Status](https://msazure.visualstudio.com/One/_apis/build/status%2FOneBranch%2FAzureLocal-Network-Switch-Validation%2FAzureLocal-Network-Switch-Validation-Official?repoName=AzureLocal-Network-Switch-Validation&branchName=main)](https://msazure.visualstudio.com/One/_build/latest?definitionId=314745&repoName=AzureSLocal-Network-Switch-Validation&branchName=main) -->
 
-#  Azure Stack HCI - Network Switch Device Validation
+#  Azure Local - Network Switch Device Validation
 
 ## Background
 
-This tool is intended to be used as a device testing tool for Azure Stack HCI. For more information on the requirements, please see: [Physical network requirements for Azure Stack HCI](https://learn.microsoft.com/en-us/azure-stack/hci/concepts/physical-network-requirements?tabs=20-21H2%2C20-21H2reqs)
+This tool is intended to be used as a device testing tool for Azure Local. For more information on the requirements, please see: [Physical network requirements for Azure Local](https://learn.microsoft.com/en-us/azure/azure-local/concepts/physical-network-requirements?view=azloc-2504&tabs=overview%2C23H2reqs)
 
 ## How to use the tool
 
 - Prepare a host which has at least two NICs which connect to switch device under test (DUT)
-- Download `SwitchValidationTool.zip` from [Release page](https://github.com/microsoft/AzureStackHCI-Network-Switch-Validation/releases) and store them in a folder on the host
+- Download `SwitchValidationTool.zip` from [Release page](https://github.com/microsoft/AzureLocal-Network-Switch-Validation/releases) and store them in a folder on the host
 - The tool will scan all active interfaces on the host but only generate report of `LLDP` enabled interface.
 - Review the [sample test data](./samples/) to have better understand the input and output.
 - The validation tool will collect network traffic and decode packages to validate protocol value required. 
