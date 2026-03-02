@@ -1,7 +1,7 @@
 ---
 name: "Tool result upload \U0001F680"
 about: 'Upload your passing result documents '
-title: "[ORGANIZATION] - [SERIES] - 22H2/23H2"
+title: "[ORGANIZATION] - [SERIES] - 23H2/24H2"
 labels: ''
 assignees: bkablawi, liunick-msft, SwitchValidationTeam
 
