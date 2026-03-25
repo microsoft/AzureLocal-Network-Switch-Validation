@@ -8,7 +8,7 @@ const (
 	STORAGE                = "Storage"
 	PASS                   = "Pass"
 	FAIL                   = "Fail"
-	ROLE_SUMMARY_TITTLE    = "Role-type Support for Azure Stack HCI:"
+	ROLE_SUMMARY_TITTLE    = "Role-type Support for Azure Local:"
 	FEATURE_SUMMARY_TITTLE = "Role-Type Test Result List:"
 	LOG_DETAIL_BELOW       = "For a more detailed log, please refer to the next section below"
 	ALL_LOGS               = "ALL Detail Logs"
