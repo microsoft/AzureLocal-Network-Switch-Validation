@@ -1,6 +1,6 @@
 module SwitchValidationTool
 
-go 1.24
+go 1.25
 
 require (
 	github.com/go-pdf/fpdf v0.9.0
